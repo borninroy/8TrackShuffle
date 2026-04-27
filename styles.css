@@ -1017,3 +1017,101 @@ img {
   text-transform: uppercase;
   color: var(--color-text-light);
 }
+
+@media (max-width: 768px) {
+
+  .kit {
+    padding: var(--sp-lg) var(--sp-md);
+  }
+
+  .kit-masthead img {
+    width: 90%;
+  }
+
+  /* 3-col grids → 1-col on mobile */
+  .swatch-grid,
+  .logo-grid,
+  .logo-icon-row,
+  .pattern-grid,
+  .para-styles,
+  .char-styles {
+    grid-template-columns: 1fr;
+  }
+
+  /* type scale rows stack better */
+  .type-row {
+    flex-direction: column;
+    gap: var(--sp-xs);
+  }
+
+  .type-tag,
+  .type-size,
+  .type-use {
+    min-width: unset;
+  }
+
+  /* buttons wrap tighter */
+  .btn-grid {
+    gap: var(--sp-lg);
+  }
+
+  /* nav stacks */
+  .comp-nav {
+    flex-direction: column;
+    gap: var(--sp-md);
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--sp-md);
+  }
+
+  /* hero text scales down */
+  .hero-preview {
+    padding: var(--sp-xl) var(--sp-lg);
+  }
+
+  .hero-headline {
+    font-size: var(--t-2xl);
+  }
+
+  .hero-sub {
+    font-size: var(--t-base);
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* form goes full width */
+  .form-demo {
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  /* char styles side by side still works at 480, but squeeze tighter */
+  .char-styles {
+    grid-template-columns: 1fr;
+  }
+
+  .kit-masthead-sub {
+    letter-spacing: 0.12em;
+    font-size: 0.6rem;
+  }
+
+  .hero-headline {
+    font-size: var(--t-xl);
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+}
